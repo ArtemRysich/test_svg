@@ -4,12 +4,20 @@
   | default @import url()
   |============================
 */
+
+@import '../../node_modules/modern-normalize/modern-normalize.css';
 @import url('./reset.css');
-@import url('./vite-promo.css');
+@import url('./fonts.css');
 @import url('./header.css');
+@import url('./all-сategory.css');
+@import url('./support-UA.css');
+@import url('./main-home.css');
+@import url('./list-shop-list.css');
+@import url('./footer.css');
+@import url('./modal-window.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -22,4 +30,58 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --background-header: rgb(255, 255, 255);
+  --background-main: #d0d0d0;
+  --main-textcolor: #11111199;
+  --H2-textcolor: #111111;
+  --main-color: rgb(79, 46, 232);
+  --accent-color: rgb(234, 198, 69);
+  --hover-button: rgba(79, 46, 232, 1);
+  --defolt-animation: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+:root[theme='dark'] {
+  --panel-bg-color: rgba(17, 17, 17, 1);
+  --container-bg-color: rgba(32, 32, 36, 1);
+  --text-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .aside-flex {
+    display: flex;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home-page__flex {
+    display: flex;
+  }
+
+  .books-wrapper {
+    margin-top: 40px;
+  }
+  .aside-flex {
+    display: block;
+  }
 }
